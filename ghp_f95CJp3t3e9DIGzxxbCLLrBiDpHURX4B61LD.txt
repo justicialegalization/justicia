@@ -1,0 +1,6 @@
+git add .
+git commit -m "update sajta"
+git push
+
+
+git push origin main

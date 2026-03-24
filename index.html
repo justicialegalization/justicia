@@ -33,16 +33,6 @@
         <a href="prodaja.html" class="header-btn">Prodaja</a>
     </div>
     <div class="header-right">
-        <!-- JEZIK DROPDOWN ISPRED KONTAKT DUGMETA -->
-        <div class="header-language dropdown">
-            <div class="dropdown-button" onclick="toggleDropdownLanguage(event)">
-                Jezik <i class="arrow"></i>
-            </div>
-            <div class="dropdown-content" id="languageDropdown">
-                <button class="lang-btn">CG | HR | SRB | BA</button>
-            </div>
-        </div>
-
         <a href="contact.html" class="header-btn">Kontakt</a>
     </div>
 </header>
@@ -102,19 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (count === target) clearInterval(interval);
     }, 200);
 
-});
-
-// DROPDOWN JEZIK
-function toggleDropdownLanguage(event) {
-    event.stopPropagation();
-    const content = document.getElementById('languageDropdown');
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-}
-
-// Zatvori dropdown ako kliknemo van njega
-window.addEventListener('click', () => {
-    const content = document.getElementById('languageDropdown');
-    content.style.display = 'none';
 });
 </script>
 
