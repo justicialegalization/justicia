@@ -9,16 +9,10 @@
 
 <title>Justicia - Početna</title>
 
-<!-- Glavni CSS -->
 <link rel="stylesheet" href="style.css">
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="logo-circle.png">
-
-<!-- Apple touch icon za iPhone/iPad -->
 <link rel="apple-touch-icon" sizes="180x180" href="logo-circle.png">
-
-<!-- Različite veličine favicon-a za kompatibilnost -->
 <link rel="icon" type="image/png" sizes="32x32" href="logo-circle.png">
 <link rel="icon" type="image/png" sizes="16x16" href="logo-circle.png">
 
@@ -39,7 +33,17 @@
         <a href="prodaja.html" class="header-btn">Prodaja</a>
     </div>
     <div class="header-right">
-        <a href="contact.html" class="header-btn">Kontak</a>
+        <!-- JEZIK DROPDOWN ISPRED KONTAKT DUGMETA -->
+        <div class="header-language dropdown">
+            <div class="dropdown-button" onclick="toggleDropdownLanguage(event)">
+                Jezik <i class="arrow"></i>
+            </div>
+            <div class="dropdown-content" id="languageDropdown">
+                <button class="lang-btn">CG | HR | SRB | BA</button>
+            </div>
+        </div>
+
+        <a href="contact.html" class="header-btn">Kontakt</a>
     </div>
 </header>
 
@@ -81,7 +85,6 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-    // SPLASH
     const splash = document.getElementById('splash-logo');
     setTimeout(() => {
         splash.style.opacity = 0;
@@ -89,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
     setTimeout(() => splash.remove(), 1000);
 
-    // ANIMACIJA BROJA 0 → 4+
     let count = 0;
     const target = 4;
     const counter = document.getElementById('exp-number');
@@ -97,12 +99,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const interval = setInterval(() => {
         count++;
         counter.textContent = count + "+";
-
-        if (count === target) {
-            clearInterval(interval);
-        }
+        if (count === target) clearInterval(interval);
     }, 200);
 
+});
+
+// DROPDOWN JEZIK
+function toggleDropdownLanguage(event) {
+    event.stopPropagation();
+    const content = document.getElementById('languageDropdown');
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+
+// Zatvori dropdown ako kliknemo van njega
+window.addEventListener('click', () => {
+    const content = document.getElementById('languageDropdown');
+    content.style.display = 'none';
 });
 </script>
 
