@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justicia - Legalizacija</title>
+<link rel="stylesheet" href="legalizacija.css">
+</head>
+<body>
+
+<!-- POZADINA -->
+<div class="background-image"></div>
+
+<!-- LOGO U CENTRU POZADINE -->
+<div class="background-logo"></div>
+
+<!-- SPLASH LOGO -->
+<div id="splash-logo"></div>
+
+<!-- STRELICA ZA POVRATAK -->
+<a href="index.html" class="back-arrow">&#8592; Početna</a>
+
+<!-- LOGO U GORNJEM DESNOM UGLU -->
+<div class="top-right-logo">
+    <img src="logo-circle.png" alt="Justicia Logo">
+</div>
+
+<!-- CENTRIRANI OBLAK -->
+<div class="center-cloud">
+    <p>Naš tim obezbeđuje brzu i efikasnu legalizaciju objekata, bez nepotrebnog čekanja i zastoja.
+Zahvaljujući iskustvu i stručnosti, svaki korak procesa realizujemo tačno i profesionalno.
+Mi smo vaša veza do pravih rešenja – sve administrativne procedure obavljamo umesto vas, brzo i precizno.
+Za razliku od javnih šalter službi, naš pristup garantuje da se vaša dokumentacija obradi bez dugih redova i odlaganja.
+Brzina, preciznost i sigurnost su naši prioriteti, kako bi vaš objekat bio legalizovan bez stresa i komplikacija.</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const splash = document.getElementById('splash-logo');
+    setTimeout(() => {
+        splash.style.opacity = 0;
+        splash.style.transform = 'translate(-50%, -50%) scale(0.9)';
+    }, 500);
+    setTimeout(() => splash.remove(), 1000);
+});
+</script>
+
+</body>
+</html>

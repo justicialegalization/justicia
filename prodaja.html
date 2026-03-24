@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justicia - Prodaja</title>
+<link rel="stylesheet" href="prodaja.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="background-image"></div>
+
+<!-- SPLASH LOGO -->
+<div id="splash-logo"></div>
+
+<!-- HEADER -->
+<header>
+    <div class="header-left">
+        <a href="index.html" class="header-btn">Početna</a>
+        <a href="about.html" class="header-btn">O nama</a>
+        <a href="prodaja.html" class="header-btn active">Prodaja</a>
+    </div>
+    <div class="header-right">
+        <a href="contact.html" class="header-btn">Kontak</a>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="main-container">
+    <div class="card-cloud">
+        <p>Mjesto za vašu nekretninu</p>
+    </div>
+    <div class="card-cloud">
+        <p>Mjesto za vašu nekretninu</p>
+    </div>
+    <div class="card-cloud">
+        <p>Mjesto za vašu nekretninu</p>
+    </div>
+    <div class="card-cloud">
+        <p>Mjesto za vašu nekretninu</p>
+    </div>
+</div>
+
+<!-- SCRIPT ZA SPLASH LOGO -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const splash = document.getElementById('splash-logo');
+
+    setTimeout(() => {
+        splash.style.opacity = 0;
+        splash.style.transform = 'translate(-50%, -50%) scale(0.9)';
+    }, 500);
+
+    setTimeout(() => splash.remove(), 1000);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justicia - Početna</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BACKGROUND IMAGE -->
+<div class="background-image"></div>
+
+<!-- SPLASH LOGO -->
+<div id="splash-logo"></div>
+
+<!-- HEADER -->
+<header>
+    <div class="header-left">
+        <a href="index.html" class="header-btn active">Početna</a>
+        <a href="about.html" class="header-btn">O nama</a>
+        <a href="prodaja.html" class="header-btn">Prodaja</a>
+    </div>
+    <div class="header-right">
+        <a href="contact.html" class="header-btn">Kontak</a>
+    </div>
+</header>
+
+<!-- MAIN -->
+<div class="main-container">
+
+    <section class="services">
+        <div class="services-cloud">
+            <h2>NAŠA USLUGA:</h2>
+        </div>
+
+        <div class="cards">
+            <a href="legalizacija.html" class="card">Legalizacija objekata</a>
+            <a href="izrada.html" class="card">Izrada građevinskih dozvola</a>
+            <a href="upotreba.html" class="card">Izrada upotrebnih dozvola</a>
+            <a href="katastar.html" class="card">Katastarske usluge</a>
+            <a href="nekretnina.html" class="card">Prodaja nekretnina</a>
+            <a href="advokat.html" class="card">Advokatske usluge</a>
+        </div>
+    </section>
+
+</div>
+
+<!-- EMAIL OBLAK (DESNO) -->
+<div class="email-box">
+    <form action="https://formspree.io/f/mwvryojp" method="POST">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="message" placeholder="Vaša poruka" required>
+        <button type="submit">Pošalji</button>
+    </form>
+</div>
+
+<!-- GODINE ISKUSTVA (LIJEVO) -->
+<div class="experience-box">
+    <span class="exp-number" id="exp-number">0</span>
+    <span class="exp-text">godina iskustva</span>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // SPLASH
+    const splash = document.getElementById('splash-logo');
+    setTimeout(() => {
+        splash.style.opacity = 0;
+        splash.style.transform = 'translate(-50%, -50%) scale(0.9)';
+    }, 500);
+    setTimeout(() => splash.remove(), 1000);
+
+    // ANIMACIJA BROJA 0 → 4+
+    let count = 0;
+    const target = 4;
+    const counter = document.getElementById('exp-number');
+
+    const interval = setInterval(() => {
+        count++;
+        counter.textContent = count + "+";
+
+        if (count === target) {
+            clearInterval(interval);
+        }
+    }, 200);
+
+});
+</script>
+
+</body>
+</html>

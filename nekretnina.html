@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justicia - Nekretnine</title>
+<link rel="stylesheet" href="nekretnina.css">
+</head>
+
+<body>
+
+<!-- POZADINA -->
+<div class="background-image"></div>
+
+<!-- LOGO U CENTRU POZADINE -->
+<div class="background-logo"></div>
+
+<!-- SPLASH LOGO -->
+<div id="splash-logo"></div>
+
+<!-- BACK DUGME -->
+<a href="index.html" class="back-arrow">&#8592; Početna</a>
+
+<!-- FORWARD DUGME -->
+<a href="prodaja.html" class="forward-arrow">Prodaja &#8594;</a>
+
+<!-- LOGO U GORNJEM DESNOM UGLU -->
+<div class="top-right-logo">
+    <img src="logo-circle.png" alt="Justicia Logo">
+</div>
+
+<!-- CENTRIRANI OBLAK -->
+<div class="center-cloud">
+    <p>
+        Naš tim je vaš pouzdan partner u prodaji nekretnina, osiguravajući da svaki korak bude siguran i transparentan.<br><br>
+        Kroz našu stručnost i iskustvo, povezujemo vas sa nekretninama koje su pravno i administrativno potpuno uredne.<br><br>
+        Brinemo o svim detaljima procesa prodaje, kako biste vi mogli da budete sigurni da je transakcija bez rizika.<br><br>
+        Kao posrednici, naš prioritet je vaša sigurnost – pružamo vam pristup samo proverjenim i pouzdanim objektima.<br><br>
+        S nama je prodaja nekretnina efikasna, jasna i bez stresa, jer garantujemo da administrativni deo bude uredno i profesionalno vođen.
+    </p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const splash = document.getElementById('splash-logo');
+    setTimeout(() => {
+        splash.style.opacity = 0;
+        splash.style.transform = 'translate(-50%, -50%) scale(0.9)';
+    }, 500);
+    setTimeout(() => splash.remove(), 1000);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justicia - Kontakt</title>
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<!-- BACKGROUND -->
+<div class="background-image"></div>
+
+<!-- LOGO U CENTRU POZADINE -->
+<div class="background-logo"></div>
+
+<!-- SPLASH LOGO -->
+<div id="splash-logo"></div>
+
+<!-- HEADER -->
+<header>
+    <div class="header-left">
+        <a href="index.html" class="header-btn">Početna</a>
+        <a href="about.html" class="header-btn">O nama</a>
+        <a href="prodaja.html" class="header-btn">Prodaja</a>
+    </div>
+    <div class="header-right">
+        <a href="contact.html" class="header-btn active">Kontakt</a>
+    </div>
+</header>
+
+<div class="main-container">
+
+ <!-- KONTAKT OBLAK -->
+ <div class="contact-cloud">
+    <p>Telefon 1: <a href="tel:+38268610741">+38268610741</a></p>
+    <p>Telefon 2: <a href="tel:+38267332957">+38267332957</a></p>
+    <p>Email: <a href="mailto:justicialegalization@gmail.com">justicialegalization@gmail.com</a></p>
+    <p>Adresa: <a href="https://www.google.com/maps/place/Trg+Sunca+4,+Budva,+Crna+Gora" target="_blank">Trg Sunca br. 4, Budva</a></p>
+    
+    <!-- Mapa -->
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.8456210429713!2d18.838449315526325!3d42.28872997919181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134e7760cb8da2b3%3A0xbd4a1e5c016eb853!2sTrg%20Sunca%204%2C%2085310%20Budva%2C%20Crna%20Gora!5e0!3m2!1ssr!2s!4v1716805289107!5m2!1ssr!2s" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+ </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const splash = document.getElementById('splash-logo');
+    setTimeout(() => {
+        splash.style.opacity = 0;
+        splash.style.transform = 'translate(-50%, -50%) scale(0.9)';
+    }, 500);
+    setTimeout(() => splash.remove(), 1000);
+});
+</script>
+
+</body>
+</html>

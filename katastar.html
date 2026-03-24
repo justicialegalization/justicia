@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justicia - Legalizacija</title>
+<link rel="stylesheet" href="legalizacija.css">
+</head>
+<body>
+
+<!-- POZADINA -->
+<div class="background-image"></div>
+
+<!-- LOGO U CENTRU POZADINE -->
+<div class="background-logo"></div>
+
+<!-- SPLASH LOGO -->
+<div id="splash-logo"></div>
+
+<!-- STRELICA ZA POVRATAK -->
+<a href="index.html" class="back-arrow">&#8592; Početna</a>
+
+<!-- LOGO U GORNJEM DESNOM UGLU -->
+<div class="top-right-logo">
+    <img src="logo-circle.png" alt="Justicia Logo">
+</div>
+
+<!-- CENTRIRANI OBLAK -->
+<div class="center-cloud">
+    <p>Naš tim pruža brze i sigurne katastarske usluge, bez nepotrebnog čekanja i komplikacija.
+Svaki zahtev obrađujemo sa maksimalnom preciznošću i profesionalizmom.
+Povezujemo vas sa stručnjacima koji razumeju vaše potrebe i omogućavaju da proces bude jednostavan i transparentan.
+Naša ekspertiza i iskustvo garantuju da ćete dobiti tačne i pouzdane informacije o svim katastarskim procedurama.
+Brzina, pouzdanost i efikasnost su naši prioriteti, kako bi svaki korak vašeg zahteva bio rešen brzo i sigurno.</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const splash = document.getElementById('splash-logo');
+    setTimeout(() => {
+        splash.style.opacity = 0;
+        splash.style.transform = 'translate(-50%, -50%) scale(0.9)';
+    }, 500);
+    setTimeout(() => splash.remove(), 1000);
+});
+</script>
+
+</body>
+</html>

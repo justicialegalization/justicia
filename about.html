@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justicia - O nama</title>
+<link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<!-- BACKGROUND -->
+<div class="background-image"></div>
+
+<!-- POZADINSKI LOGO -->
+<div class="background-logo"></div>
+
+<!-- SPLASH LOGO -->
+<div id="splash-logo"></div>
+
+<!-- HEADER -->
+<header>
+    <div class="header-left">
+        <a href="index.html" class="header-btn">Početna</a>
+        <a href="about.html" class="header-btn active">O nama</a>
+        <a href="prodaja.html" class="header-btn">Prodaja</a>
+    </div>
+    <div class="header-right">
+        <a href="contact.html" class="header-btn">Kontakt</a>
+    </div>
+</header>
+
+<!-- GLAVNI SADRŽAJ -->
+<div class="main-container">
+
+    <!-- OBLAK SA TEKSTOM -->
+    <div class="about-cloud">
+        <h2>Naš cilj:</h2>
+        <p>
+        Dosta vam je beskrajnog čekanja na dozvole? Ne možete da izdajete stan ili prodate kuću dok dokumenti ne budu gotovi? Mi smo tu da zajedno sa vama sve završimo ekspresno brzo! Dokumentaciju koju biste inače čekali godinu ili dvije, mi vam obezbjeđujemo odmah – bez odlaganja i komplikacija. Naša firma je vaš pouzdan partner za ubrzanu legalizaciju objekata, izradu građevinskih i upotrebnih dozvola, geodetske usluge, stručne konsultacije i prodaju nekretnina. Sa nama, vaš put do sigurnih papira i slobodnog raspolaganja imovinom postaje jednostavan i brz.
+        </p>
+        <p>
+        Naš tim pruža kompletnu podršku u oblasti građevinarstva i nekretnina. Specijalizovani smo za ubrzanu legalizaciju objekata, izradu građevinskih i upotrebnih dozvola, kao i geodetske usluge. Pored toga, nudimo stručne konsultacije i posredovanje u prodaji nekretnina, kako bismo klijentima obezbijedili brza i efikasna rješenja.
+        </p>
+    </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const splash = document.getElementById('splash-logo');
+    setTimeout(() => {
+        splash.style.opacity = 0;
+        splash.style.transform = 'translate(-50%, -50%) scale(0.9)';
+    }, 500);
+    setTimeout(() => splash.remove(), 1000);
+});
+</script>
+
+</body>
+</html>

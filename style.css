@@ -1,0 +1,241 @@
+/* OSNOVNO */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cursive', sans-serif;
+    color: #D4AF37;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* POZADINA */
+.background-image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg2.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+/* LOGO U CENTRU POZADINE */
+.background-image::after {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background-image: url('logo-circle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    filter: brightness(0.8);
+    z-index: -1;
+}
+
+/* SPLASH LOGO */
+#splash-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background-image: url('logo-circle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+}
+
+/* HEADER */
+header {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-left { display: flex; gap: 20px; flex-wrap: wrap; }
+.header-right { display: flex; }
+
+.header-btn {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.header-btn:hover { color: gold; text-shadow: 0 0 10px gold; }
+.header-btn.active { color: gold; text-shadow: 0 0 20px gold; }
+
+/* MAIN */
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+    padding-bottom: 150px;
+}
+
+/* USLUGE */
+.services {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.services-cloud {
+    display: inline-block;
+    background: rgba(34,34,34,0.85);
+    padding: 10px 25px;
+    border-radius: 35px;
+    border: 2px solid #D4AF37;
+    box-shadow: 0 0 12px rgba(212,175,55,0.5);
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #FFD700;
+    background: linear-gradient(145deg, rgba(34,34,34,0.9), rgba(50,50,50,0.85));
+    padding: 15px;
+    width: 130px;
+    height: 130px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255,215,0,0.6);
+}
+
+/* EMAIL OBLAK */
+.email-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(34,34,34,0.9);
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 2px solid #D4AF37;
+    box-shadow: 0 0 15px rgba(212,175,55,0.5);
+    z-index: 10;
+}
+
+.email-box form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.email-box input {
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(212,175,55,0.7);
+    background: #111;
+    color: #D4AF37;
+    padding: 0 10px;
+}
+
+.email-box input[type="email"] { width: 140px; }
+.email-box input[type="text"] { width: 200px; }
+
+.email-box button {
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 20px;
+    border: none;
+    background: #D4AF37;
+    color: #0a0a0a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.email-box button:hover {
+    background: gold;
+    box-shadow: 0 0 10px gold;
+}
+
+/* GODINE ISKUSTVA */
+.experience-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(34,34,34,0.9);
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 2px solid #D4AF37;
+    box-shadow: 0 0 15px rgba(212,175,55,0.5);
+    z-index: 10;
+    text-align: center;
+}
+
+.exp-number {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.exp-text {
+    font-size: 14px;
+}
+
+/* --- RESPONSIVE --- */
+
+/* Veliki tablet / mali desktop */
+@media (max-width: 1024px) {
+    .cards { gap: 10px; }
+    .card { width: 120px; height: 120px; font-size: 12px; }
+    .background-image::after { width: 300px; height: 300px; }
+    #splash-logo { width: 300px; height: 300px; }
+}
+
+/* Tablet / veći mobiteli */
+@media (max-width: 768px) {
+    header { flex-direction: column; gap: 10px; }
+    .header-left, .header-right { justify-content: center; gap: 10px; }
+    .cards { flex-wrap: wrap; justify-content: center; }
+    .card { width: 110px; height: 110px; font-size: 12px; }
+    .background-image::after { width: 250px; height: 250px; }
+    #splash-logo { width: 250px; height: 250px; }
+}
+
+/* Mobilni uređaji */
+@media (max-width: 480px) {
+    .cards { gap: 8px; }
+    .card { width: 90px; height: 90px; font-size: 11px; padding: 10px; }
+    .email-box { bottom: 10px; right: 10px; padding: 8px 10px; }
+    .experience-box { bottom: 10px; left: 10px; padding: 8px 10px; }
+    .background-image::after { width: 180px; height: 180px; }
+    #splash-logo { width: 180px; height: 180px; }
+}

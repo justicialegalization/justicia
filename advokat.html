@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justicia - Legalizacija</title>
+<link rel="stylesheet" href="legalizacija.css">
+</head>
+<body>
+
+<!-- POZADINA -->
+<div class="background-image"></div>
+
+<!-- LOGO U CENTRU POZADINE -->
+<div class="background-logo"></div>
+
+<!-- SPLASH LOGO -->
+<div id="splash-logo"></div>
+
+<!-- STRELICA ZA POVRATAK -->
+<a href="index.html" class="back-arrow">&#8592; Početna</a>
+
+<!-- LOGO U GORNJEM DESNOM UGLU -->
+<div class="top-right-logo">
+    <img src="logo-circle.png" alt="Justicia Logo">
+</div>
+
+<!-- CENTRIRANI OBLAK -->
+<div class="center-cloud">
+    <p>Naš tim je posvećen da vas vodi kroz svaki korak procesa legalizacije, izrade svih vrsta dozvola, prodaje nekretnina, pružajući brzu i sigurnu podršku.
+Saradjujemo sa najboljim timom advokata, kako bismo osigurali da dobijete pravnu pomoć koja je zaista prilagođena vašim potrebama.
+Mi smo vaša veza do stručnjaka – povezujemo vas sa advokatom koji razume vašu specifičnu situaciju i ciljeve.
+Naša ekspertiza i mreža partnera garantuju da ćete dobiti profesionalnu, pouzdanu i pravovremenu podršku.
+S nama, prodaja nekretnina postaje jednostavna, efikasna i bez nepotrebnog stresa, jer brinemo o svakoj pravnoj i administrativnoj detaljnosti umesto vas.</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const splash = document.getElementById('splash-logo');
+    setTimeout(() => {
+        splash.style.opacity = 0;
+        splash.style.transform = 'translate(-50%, -50%) scale(0.9)';
+    }, 500);
+    setTimeout(() => splash.remove(), 1000);
+});
+</script>
+
+</body>
+</html>

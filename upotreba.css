@@ -1,0 +1,143 @@
+/* OSNOVNO */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cursive', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #D4AF37;
+    position: relative;
+}
+
+/* POZADINA */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+/* LOGO U CENTRU POZADINE */
+.background-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background-image: url('logo-circle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    filter: brightness(0.8);
+    z-index: -1;
+}
+
+/* SPLASH LOGO */
+#splash-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background-image: url('logo-circle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+}
+
+/* BACK ARROW */
+.back-arrow {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    background: rgba(34,34,34,0.7);
+    box-shadow: 0 0 10px rgba(212,175,55,0.5);
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.back-arrow:hover {
+    background: rgba(50,50,50,0.85);
+    color: gold;
+    box-shadow: 0 0 15px gold;
+}
+
+/* LOGO U GORNJEM DESNOM UGLU */
+.top-right-logo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.top-right-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(2px 2px 5px gold);
+}
+
+/* CENTRIRANI OBLAK */
+.center-cloud {
+    background: rgba(34,34,34,0.85);
+    padding: 40px 50px;
+    border-radius: 35px;
+    border: 2px solid #D4AF37;
+    box-shadow: 0 0 20px rgba(212,175,55,0.6);
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+    font-size: 18px;
+    z-index: 5;
+}
+
+.center-cloud p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+    .center-cloud {
+        padding: 25px 30px;
+        font-size: 16px;
+    }
+    .back-arrow { font-size: 18px; padding: 6px 10px; }
+    .background-logo { width: 300px; height: 300px; }
+    #splash-logo { width: 300px; height: 300px; }
+    .top-right-logo img { width: 60px; height: 60px; }
+}
+
+@media (max-width: 480px){
+    .center-cloud {
+        width: 90%;
+        padding: 20px;
+        font-size: 14px;
+    }
+    .back-arrow { font-size: 16px; padding: 5px 8px; }
+    .background-logo { width: 200px; height: 200px; }
+    #splash-logo { width: 200px; height: 200px; }
+    .top-right-logo img { width: 50px; height: 50px; }
+}

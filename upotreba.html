@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justicia - Legalizacija</title>
+<link rel="stylesheet" href="legalizacija.css">
+</head>
+<body>
+
+<!-- POZADINA -->
+<div class="background-image"></div>
+
+<!-- LOGO U CENTRU POZADINE -->
+<div class="background-logo"></div>
+
+<!-- SPLASH LOGO -->
+<div id="splash-logo"></div>
+
+<!-- STRELICA ZA POVRATAK -->
+<a href="index.html" class="back-arrow">&#8592; Početna</a>
+
+<!-- LOGO U GORNJEM DESNOM UGLU -->
+<div class="top-right-logo">
+    <img src="logo-circle.png" alt="Justicia Logo">
+</div>
+
+<!-- CENTRIRANI OBLAK -->
+<div class="center-cloud">
+    <p>Naš tim osigurava da dobijete upotrebnu dozvolu brzo i bez komplikacija.
+Sve procedure obavljamo efikasno, vodeći računa o svim potrebnim dokumentima i zakonima.
+Mi vas vodimo kroz proces, tako da svaki korak bude jasan i bez stresa.
+Naša stručnost omogućava da vaša dozvola bude izdana u rekordnom roku, bez čekanja kao na javnim šalterima.
+Brzina, preciznost i pouzdanost čine nas partnerom na kojeg možete uvek računati.</p>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const splash = document.getElementById('splash-logo');
+    setTimeout(() => {
+        splash.style.opacity = 0;
+        splash.style.transform = 'translate(-50%, -50%) scale(0.9)';
+    }, 500);
+    setTimeout(() => splash.remove(), 1000);
+});
+</script>
+
+</body>
+</html>
