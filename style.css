@@ -63,6 +63,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .header-left { display: flex; gap: 20px; flex-wrap: wrap; }
@@ -78,6 +79,31 @@ header {
 
 .header-btn:hover { color: gold; text-shadow: 0 0 10px gold; }
 .header-btn.active { color: gold; text-shadow: 0 0 20px gold; }
+
+/* GODINE ISKUSTVA U GORNJEM LEVOM UGLU */
+.experience-box {
+    position: absolute;
+    top: 60px; /* ispod hedera */
+    left: 30px;
+    background: rgba(34,34,34,0.9);
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 2px solid #D4AF37;
+    box-shadow: 0 0 15px rgba(212,175,55,0.5);
+    text-align: center;
+    z-index: 100;
+}
+
+.exp-number {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.exp-text {
+    font-size: 12px;
+}
 
 /* MAIN */
 .main-container {
@@ -137,7 +163,7 @@ header {
     box-shadow: 0 10px 20px rgba(255,215,0,0.6);
 }
 
-/* EMAIL OBLAK */
+/* EMAIL BOX NA DONJOJ DESNOJ STRANI */
 .email-box {
     position: fixed;
     bottom: 20px;
@@ -147,14 +173,11 @@ header {
     border-radius: 30px;
     border: 2px solid #D4AF37;
     box-shadow: 0 0 15px rgba(212,175,55,0.5);
-    z-index: 10;
-}
-
-.email-box form {
     display: flex;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    z-index: 10;
 }
 
 .email-box input {
@@ -185,57 +208,20 @@ header {
     box-shadow: 0 0 10px gold;
 }
 
-/* GODINE ISKUSTVA */
-.experience-box {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: rgba(34,34,34,0.9);
-    padding: 15px 20px;
-    border-radius: 20px;
-    border: 2px solid #D4AF37;
-    box-shadow: 0 0 15px rgba(212,175,55,0.5);
-    z-index: 10;
-    text-align: center;
-}
-
-.exp-number {
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
-    color: #FFD700;
-}
-
-.exp-text {
-    font-size: 14px;
-}
-
-/* --- RESPONSIVE --- */
-
-/* Veliki tablet / mali desktop */
-@media (max-width: 1024px) {
-    .cards { gap: 10px; }
-    .card { width: 120px; height: 120px; font-size: 12px; }
-    .background-image::after { width: 300px; height: 300px; }
-    #splash-logo { width: 300px; height: 300px; }
-}
-
-/* Tablet / veći mobiteli */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     header { flex-direction: column; gap: 10px; }
     .header-left, .header-right { justify-content: center; gap: 10px; }
     .cards { flex-wrap: wrap; justify-content: center; }
     .card { width: 110px; height: 110px; font-size: 12px; }
-    .background-image::after { width: 250px; height: 250px; }
     #splash-logo { width: 250px; height: 250px; }
+    .experience-box { top: 80px; left: 20px; }
 }
 
-/* Mobilni uređaji */
 @media (max-width: 480px) {
     .cards { gap: 8px; }
     .card { width: 90px; height: 90px; font-size: 11px; padding: 10px; }
     .email-box { bottom: 10px; right: 10px; padding: 8px 10px; }
-    .experience-box { bottom: 10px; left: 10px; padding: 8px 10px; }
-    .background-image::after { width: 180px; height: 180px; }
+    .experience-box { top: 70px; left: 10px; font-size: 12px; }
     #splash-logo { width: 180px; height: 180px; }
 }
