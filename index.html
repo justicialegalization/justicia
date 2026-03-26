@@ -10,12 +10,7 @@
 <title>Justicia - Početna</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link rel="icon" type="image/png" href="logo-circle.png">
-<link rel="apple-touch-icon" sizes="180x180" href="logo-circle.png">
-<link rel="icon" type="image/png" sizes="32x32" href="logo-circle.png">
-<link rel="icon" type="image/png" sizes="16x16" href="logo-circle.png">
-
 </head>
 <body>
 
@@ -37,6 +32,12 @@
     </div>
 </header>
 
+<!-- GODINE ISKUSTVA U GORNJEM LEVOM UGLU -->
+<div class="experience-box">
+    <span class="exp-number" id="exp-number">0</span>
+    <span class="exp-text">godina iskustva</span>
+</div>
+
 <!-- MAIN -->
 <div class="main-container">
 
@@ -57,7 +58,7 @@
 
 </div>
 
-<!-- EMAIL OBLAK (DESNO) -->
+<!-- EMAIL OBLAK NA DONJOJ DESNOJ STRANI -->
 <div class="email-box">
     <form action="https://formspree.io/f/mwvryojp" method="POST">
         <input type="email" name="email" placeholder="Email" required>
@@ -66,15 +67,9 @@
     </form>
 </div>
 
-<!-- GODINE ISKUSTVA (LIJEVO) -->
-<div class="experience-box">
-    <span class="exp-number" id="exp-number">0</span>
-    <span class="exp-text">godina iskustva</span>
-</div>
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-
+    // SPLASH LOGO
     const splash = document.getElementById('splash-logo');
     setTimeout(() => {
         splash.style.opacity = 0;
@@ -82,16 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
     setTimeout(() => splash.remove(), 1000);
 
+    // BROJ GODINA ISKUSTVA
     let count = 0;
     const target = 4;
     const counter = document.getElementById('exp-number');
-
     const interval = setInterval(() => {
         count++;
         counter.textContent = count + "+";
         if (count === target) clearInterval(interval);
     }, 200);
-
 });
 </script>
 
